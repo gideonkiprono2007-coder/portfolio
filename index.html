@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kiprono| Full Stack Developer</title>
   <link rel="stylesheet" href="index.css" />
 </head>
+
 <body>
-<canvas id="bg"></canvas>
-<div class="noise"></div>
-<div class="cursor-light"></div>
+  <canvas id="bg"></canvas>
+  <div class="noise"></div>
+  <div class="cursor-light"></div>
 
   <div class="cursor-glow"></div>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-        <nav class="navigation">
-            <a href="#about">About</a>
-            <a href="#projects">Work</a>
-            <a href="#Stack">Stack</a>
-            <a href="#contacts">Contacts</a>
-        </nav>
-        <div class="header">
-            Personal Portfolio
-        </div>
+      <nav class="navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Work</a>
+        <a href="#Stack">Stack</a>
+        <a href="#contacts">Contacts</a>
+      </nav>
+      <div class="header">
+        Personal Portfolio
+      </div>
       <h1 class="reveal">Hi, I'm <span class="gradient">Kiprono Gideon</span></h1>
-      <p>A Student of Computer Science <br/> Maseno University</p>
+      <p>A Student of Computer Science <br /> Maseno University</p>
       <div class="profile-wrapper">
         <div class="profile-border"></div>
-          <div class="profile-card">
-            <img src="image.jpeg" alt="" class="image">
-          </div><br>
+        <div class="profile-card">
+          <img src="image.jpeg" alt="" class="image">
+        </div><br>
       </div>
-     <h2 class="typing"></h2>
+      <h2 class="typing"></h2>
       <p class="reveal delay">
         I build Full-Stack Web applications.
       </p>
@@ -48,8 +50,25 @@
   <section class="section" id="about">
     <h2 class="section-title">About</h2>
     <p>
-      I build software (Saas) applications using modern tools that are scalable.
-      Being a Computer Science i have been able to equip myself with WebDev skills.
+      I am a Computer Science student at Maseno University and a junior full-stack developer with a strong interest in
+      backend systems and scalable web applications.
+
+      I enjoy building RESTful APIs, designing database structures, and creating user-friendly interfaces. I focus on
+      writing clean, maintainable code and understanding how systems work under the hood.<br>
+    <p class="skills">
+      1.Currently improving my skills in:<br>
+
+      2.Backend architecture<br>
+
+      3.Database optimization<br>
+
+      4.Authentication & security<br>
+
+      5.API performance<br>
+
+      6.Scalable application design<br></p>
+
+    My goal is to become a highly skilled software engineer building impactful digital solutions.
     </p>
     <!-- <div class="stats">
       <div class="stat">
@@ -76,7 +95,7 @@
         <h3>API Infrastructure</h3>
         <p>RESTful microservices with authentication & cloud deployment with scalable architecture.</p>
       </div>
-    <div class="card">
+      <div class="card">
         <h3>Personal portfolios/family/personal</h3>
         <p>Creating smooth user experience and designs for personal or public uses.</p>
       </div>
@@ -88,23 +107,29 @@
     <h2 class="section-title" id="Section">STACK</h2>
     <div class="timeline">
       <div class="timeline-item">
-        <h3>Frontend</h3>
+        <h3>Frontend💻 </h3>
         <p>Language:Java-script(typescript)</p>
-        <p>Tools/Frameworks:Next.js,React,Redux</p>
+        <p>-Next.js -HTML5 -Redux -CSS3 -(ES6+) -React -Tailwind </p>
       </div>
-    <div class="timeline-item">
-        <h3>Backend</h3>
+      <div class="timeline-item">
+        <h3>Backend⚙️ </h3>
         <p>Language:Java-script</p>
-        <p>Backend:Node js,Express,RestApi,JWT</p>
-        <p>Database:MongoDB(mongooose)</p>
+        <p>-Node js -Express -REST API -JWT(authentication) -PostMan(for testing apis)</p>
         <p>Architecting scalable backend Applications that handle hundreds of users.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Database🗄️</h3>
+        <p>MongoDB [Mongoose]</p>
+        <p>Building a scalable schema for large applications with well hashed user secret details</p>
+        <p></p>
       </div>
     </div>
   </section>
-  
+
   <div class="final">
     <p>I craete websites with full control and highly scalable,<br>opimized performance and also free from attacks<br>
-    Contact me for more inqueries.And the price is highly affordable.</p>
+      Contact me for more inqueries.And the price is highly affordable.</p>
   </div>
   <!-- CONTACT -->
   <section class="section" id="contacts">
@@ -116,117 +141,118 @@
   </section>
 
 
-<script>
-  // Typing effect
-  const roles = ["Junior Full Stack Developer"];
-  let i = 0, j = 0, current = "", isDeleting = false;
-  const typingEl = document.querySelector(".typing");
+  <script>
+    // Typing effect
+    const roles = ["Junior Full Stack Developer"];
+    let i = 0, j = 0, current = "", isDeleting = false;
+    const typingEl = document.querySelector(".typing");
 
-  function type() {
-    current = roles[i];
-    if (!isDeleting) {
-      typingEl.textContent = current.slice(0, ++j);
-      if (j === current.length) isDeleting = true;
-    } else {
-      typingEl.textContent = current.slice(0, --j);
-      if (j === 0) {
-        isDeleting = false;
-        i = (i + 1) % roles.length;
-      }
-    }
-    setTimeout(type, isDeleting ? 100 : 100);
-  }
-  type();
-
-  // Counter animation
-  const counters = document.querySelectorAll(".counter");
-  counters.forEach(counter => {
-    const update = () => {
-      const target = +counter.dataset.target;
-      const count = +counter.innerText;
-      const increment = target / 100;
-      if (count < target) {
-        counter.innerText = Math.ceil(count + increment);
-        setTimeout(update, 20);
+    function type() {
+      current = roles[i];
+      if (!isDeleting) {
+        typingEl.textContent = current.slice(0, ++j);
+        if (j === current.length) isDeleting = true;
       } else {
-        counter.innerText = target;
+        typingEl.textContent = current.slice(0, --j);
+        if (j === 0) {
+          isDeleting = false;
+          i = (i + 1) % roles.length;
+        }
       }
-    };
-    update();
-  });
+      setTimeout(type, isDeleting ? 100 : 100);
+    }
+    type();
 
-  // Cursor glow
-  const glow = document.querySelector(".cursor-glow");
-  document.addEventListener("mousemove", e => {
-    glow.style.left = e.clientX + "px";
-    glow.style.top = e.clientY + "px";
-  });
-
-  // Scroll reveal
-  const reveals = document.querySelectorAll(".section, .card");
-  window.addEventListener("scroll", () => {
-    reveals.forEach(el => {
-      const top = el.getBoundingClientRect().top;
-      if (top < window.innerHeight - 100) {
-        el.classList.add("visible");
-      }
+    // Counter animation
+    const counters = document.querySelectorAll(".counter");
+    counters.forEach(counter => {
+      const update = () => {
+        const target = +counter.dataset.target;
+        const count = +counter.innerText;
+        const increment = target / 100;
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(update, 20);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      update();
     });
-  });
 
-  
-/* ============================= */
-/* 3D PARTICLE BACKGROUND */
-/* ============================= */
+    // Cursor glow
+    const glow = document.querySelector(".cursor-glow");
+    document.addEventListener("mousemove", e => {
+      glow.style.left = e.clientX + "px";
+      glow.style.top = e.clientY + "px";
+    });
 
-const canvas = document.getElementById("bg");
-const ctx = canvas.getContext("2d");
-canvas.width = innerWidth;
-canvas.height = innerHeight;
+    // Scroll reveal
+    const reveals = document.querySelectorAll(".section, .card");
+    window.addEventListener("scroll", () => {
+      reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          el.classList.add("visible");
+        }
+      });
+    });
 
-let particles = [];
 
-class Particle {
-  constructor() {
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height;
-    this.z = Math.random() * canvas.width;
-  }
-  move() {
-    this.z -= 2;
-    if (this.z <= 0) {
-      this.z = canvas.width;
+    /* ============================= */
+    /* 3D PARTICLE BACKGROUND */
+    /* ============================= */
+
+    const canvas = document.getElementById("bg");
+    const ctx = canvas.getContext("2d");
+    canvas.width = innerWidth;
+    canvas.height = innerHeight;
+
+    let particles = [];
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.z = Math.random() * canvas.width;
+      }
+      move() {
+        this.z -= 2;
+        if (this.z <= 0) {
+          this.z = canvas.width;
+        }
+      }
+      draw() {
+        let k = 128 / this.z;
+        let px = this.x * k + canvas.width / 2;
+        let py = this.y * k + canvas.height / 2;
+
+        if (px >= 0 && px <= canvas.width && py >= 0 && py <= canvas.height) {
+          let size = (1 - this.z / canvas.width) * 3;
+          ctx.fillStyle = "white";
+          ctx.fillRect(px, py, size, size);
+        }
+      }
     }
-  }
-  draw() {
-    let k = 128 / this.z;
-    let px = this.x * k + canvas.width / 2;
-    let py = this.y * k + canvas.height / 2;
 
-    if (px >= 0 && px <= canvas.width && py >= 0 && py <= canvas.height) {
-      let size = (1 - this.z / canvas.width) * 3;
-      ctx.fillStyle = "white";
-      ctx.fillRect(px, py, size, size);
+    for (let i = 0; i < 400; i++) {
+      particles.push(new Particle());
     }
-  }
-}
 
-for (let i = 0; i < 400; i++) {
-  particles.push(new Particle());
-}
+    function animate() {
+      ctx.fillStyle = "rgba(15,15,20,0.4)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-function animate() {
-  ctx.fillStyle = "rgba(15,15,20,0.4)";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.move();
+        p.draw();
+      });
 
-  particles.forEach(p => {
-    p.move();
-    p.draw();
-  });
-
-  requestAnimationFrame(animate);
-}
-animate();
-</script>
+      requestAnimationFrame(animate);
+    }
+    animate();
+  </script>
 
 </body>
+
 </html>
