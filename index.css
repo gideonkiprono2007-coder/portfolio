@@ -91,6 +91,7 @@ body {
   opacity: 0;
   transform: translateY(40px);
   transition: 0.8s ease;
+  margin:15px;
   p{
     margin-bottom:0px;
   }
@@ -254,6 +255,7 @@ padding:50px;
 }
 
 .skills{
-  color:blue;
+  color:var(--primary);
   padding:15px;
+  font-weight:600px;
 }
