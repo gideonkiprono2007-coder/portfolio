@@ -239,10 +239,10 @@ padding:50px;
   opacity: 0.8;
 }
 .navigation{
-    font-size:15px;
+    font-size:10px;
     transition: 2s;
     a{ color:white;
-        margin-left: 20px;
+        margin-left: 5px;
         font-weight: bold;
     text-decoration: none;
     }
