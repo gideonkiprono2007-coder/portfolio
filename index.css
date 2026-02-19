@@ -16,7 +16,7 @@
 }
 
 body {
-    padding:20px;
+  padding:10px;
   background: var(--bg);
   color: var(--text);
   overflow-x: hidden;
@@ -88,7 +88,6 @@ body {
 
 /* Sections */
 .section {
-  padding: 100px 10%;
   opacity: 0;
   transform: translateY(40px);
   transition: 0.8s ease;
